@@ -29,20 +29,19 @@ User.init({
         allowNull: false,
     },
     role: {
-        type: DataTypes.STRING,
-        enum: ["admin", "customer", "seller"],
-        defaultValue: "customer",
+        type: DataTypes.ENUM('admin', 'customer', 'seller', 'manager'),
+        defaultValue: 'customer',
         allowNull: false,
     },
     status: {
-        type: DataTypes.STRING,
-        enum: ["active", "inactive", 'blocked'],
+        type: DataTypes.ENUM('active', 'inactive', 'blocked'),
+        defaultValue: 'active',
+        allowNull: false,
     },
 }, {
     sequelize,
     modelName: "User",
     tableName: "users",
-    timestamps: true
+    timestamps: true//this
 })
-
-export default User;
+export default User
