@@ -15,6 +15,8 @@ export const seedUsers = async () => { // async tells the code to wait for certa
         role: 'admin',
         status: 'active'
       },
+      // token specify who entered in the system authetuticatin authorization
+      // JWT.io
       {
         fullName: 'NDAYAMBAJE JEAN CLAUDE',
         email: 'claudjean123@gmail.com',
